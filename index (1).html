@@ -1,0 +1,475 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Engr. Davedzzon Duque</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: the palette of the coconut photo applied to a room. Beige plaster is the wall, walnut is the paneling and furniture, cream and coconut white are the soft pieces, and pictures hang on the wall in walnut frames. */
+:root {
+  --wall: #E3D4C2;
+  --ink: #3A2217;
+  --muted: #6A5242;
+  --label: #7A4A2B;
+  --walnut: #5B3523;
+  --walnut-deep: #3E2418;
+  --husk: #9A6339;
+  --cream: #F6EFE5;
+  --coconut: #FBF8F3;
+  --sand: #CDB8A0;
+  --rule: rgba(91, 53, 35, 0.28);
+  --on-walnut: #F6EFE5;
+  --on-walnut-muted: #E3D4C2;
+  --font-display: 'Bricolage Grotesque', 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 16px; }
+body {
+  background-color: var(--wall);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .2 0 0 0 0 .12 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 0 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1160px; margin: 0 auto; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--walnut); outline-offset: 3px; }
+.rug :focus-visible, .floor :focus-visible { outline-color: var(--cream); }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* Top bar */
+.top {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+  gap: 10px 28px; padding-block: 22px; border-bottom: 1px solid var(--rule);
+}
+.mark { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; }
+.top nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: 0.9375rem; font-weight: 500; }
+.top nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--husk); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 40px 64px; padding-block: 64px 56px; align-items: center;
+}
+.hero > * { min-width: 0; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--label); }
+h1 {
+  font-family: var(--font-display); font-weight: 700; color: var(--ink);
+  font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.02; letter-spacing: -0.025em;
+  margin: 18px 0 22px; text-wrap: balance;
+}
+.lede { font-size: 1.1875rem; color: var(--muted); max-width: 48ch; margin-bottom: 30px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block; padding: 13px 24px; font-weight: 600; font-size: 0.9375rem;
+  text-decoration: none; border: 2px solid var(--walnut); border-radius: 999px;
+}
+.btn.primary { background: var(--walnut); color: var(--cream); }
+.btn.ghost { color: var(--walnut); }
+.btn:hover { filter: brightness(1.15); }
+
+.art { margin: 0; }
+.frame {
+  border: 12px solid var(--walnut); background: var(--coconut); padding: 12px;
+  box-shadow: 0 24px 44px rgba(58, 34, 23, 0.28), inset 0 0 0 1px rgba(205, 184, 160, 0.9);
+}
+.frame svg { display: block; width: 100%; height: auto; }
+.art .frame { background: #FFFFFF; }
+.art figcaption { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted); margin-top: 14px; }
+.t { font-family: var(--font-mono); font-size: 11px; fill: var(--ink); }
+
+/* Stats */
+.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--rule); }
+.stats li { padding: 22px 20px; border-left: 1px solid var(--rule); min-width: 0; }
+.stats li:first-child { border-left: 0; padding-left: 0; }
+.stats b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 2.25rem; line-height: 1.1; color: var(--ink); }
+.stats span { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--label); }
+
+/* Sections */
+.section { padding-block: 72px 8px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 24px; margin-bottom: 32px; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; line-height: 1.05; margin: 0; color: var(--ink); }
+.sec-head p { color: var(--muted); max-width: 46ch; }
+h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.375rem; line-height: 1.15; margin: 0; }
+
+/* Services: walnut pieces on the wall */
+.svc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.svc > * { min-width: 0; }
+.piece { background: var(--walnut); color: var(--on-walnut); border-radius: 28px; padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 10px; }
+.piece p { color: var(--on-walnut-muted); }
+.piece.pkg { grid-column: 1 / -1; background: var(--cream); color: var(--ink); border: 1px solid var(--sand); flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; }
+.piece.pkg p { color: var(--muted); flex: 1 1 320px; }
+.piece.pkg h3 { flex: 0 0 auto; }
+.badge { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; background: var(--walnut); color: var(--cream); padding: 2px 10px; border-radius: 999px; align-self: center; }
+.note { margin-top: 20px; color: var(--muted); font-size: 0.9375rem; }
+
+/* Software */
+.tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); }
+.tool-group { padding: 22px 20px 24px 0; border-bottom: 1px solid var(--rule); min-width: 0; }
+.tool-group h3 { font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label); margin-bottom: 12px; }
+.tool-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.tool-group li { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--ink); }
+
+/* Projects: pictures hung in walnut frames */
+.work { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px 48px; align-items: start; padding-block: 44px; border-top: 1px solid var(--rule); }
+.work > * { min-width: 0; }
+.work:nth-of-type(even) { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+.work:nth-of-type(even) .gallery { order: 2; }
+.gallery .frame img.main { display: block; width: 100%; height: auto; background: #fff; }
+.thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.thumb { width: 92px; height: 62px; padding: 0; border: 3px solid var(--walnut); background: var(--coconut); cursor: pointer; border-radius: 0; }
+.thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.thumb[aria-pressed="true"] { outline: 3px solid var(--husk); outline-offset: 2px; }
+.num { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; color: var(--label); }
+.work h3 { font-size: clamp(1.625rem, 3vw, 2.125rem); letter-spacing: -0.015em; color: var(--ink); margin: 6px 0 6px; }
+.where { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--muted); margin-bottom: 16px; }
+.work p.desc { color: var(--ink); max-width: 52ch; }
+.facts { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 4px; font-size: 0.9375rem; color: var(--muted); }
+.facts li::before { content: ""; display: inline-block; width: 14px; height: 2px; background: var(--husk); vertical-align: middle; margin-right: 10px; }
+.tags { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { background: var(--walnut); color: var(--cream); font-weight: 600; font-size: 0.8125rem; padding: 3px 12px; border-radius: 999px; }
+
+/* Experience */
+.tline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.tline li { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 4px 28px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.tline li > * { min-width: 0; }
+.when { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--label); padding-top: 4px; }
+.role { font-weight: 600; font-size: 1.0625rem; color: var(--ink); }
+.org { color: var(--muted); font-size: 0.9375rem; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 48px; margin-top: 36px; }
+.two h3 { font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label); margin-bottom: 12px; }
+.two ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.two li::before { content: ""; display: inline-block; width: 14px; height: 2px; background: var(--husk); vertical-align: middle; margin-right: 10px; }
+
+/* Band */
+.band { display: block; width: 100%; height: 56px; margin-top: 72px; }
+
+/* Quote: a walnut panel like the paneling in the room */
+.rug { background: var(--walnut); color: var(--on-walnut); padding: clamp(24px, 4vw, 48px); margin-top: 72px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 56px; border-radius: 6px; }
+.rug > * { min-width: 0; }
+.rug h2 { color: var(--cream); margin-bottom: 12px; }
+.rug h3 { color: var(--cream); margin-bottom: 12px; }
+.rug .lead { color: var(--on-walnut-muted); max-width: 38ch; }
+.rug ul, .rug ol { margin: 0; padding-left: 1.25rem; display: grid; gap: 8px; color: var(--on-walnut-muted); }
+.rug li::marker { color: var(--sand); font-family: var(--font-mono); font-weight: 500; }
+.rug .col { display: grid; gap: 28px; align-content: start; }
+
+.contact { margin: 28px 0 0; display: grid; gap: 12px; }
+.contact div { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.contact dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sand); width: 88px; }
+.contact dd { margin: 0; font-weight: 600; font-size: 1.0625rem; color: var(--cream); overflow-wrap: anywhere; min-width: 0; }
+.contact a { color: var(--cream); text-decoration-color: var(--sand); text-underline-offset: 4px; }
+.copy { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; color: var(--cream); background: transparent; border: 1.5px solid var(--sand); border-radius: 999px; padding: 2px 12px; cursor: pointer; }
+.copy:hover { background: var(--cream); color: var(--walnut); border-color: var(--cream); }
+
+.floor { margin-top: 56px; background: var(--walnut-deep); color: var(--cream); padding: 22px 28px; display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; font-family: var(--font-mono); font-size: 0.8125rem; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 40px 40px; }
+  .svc { grid-template-columns: minmax(0, 1fr); }
+  .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .work, .work:nth-of-type(even) { grid-template-columns: minmax(0, 1fr); }
+  .work:nth-of-type(even) .gallery { order: 0; }
+  .two, .rug { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats li:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .stats li:nth-child(n+3) { border-top: 1px solid var(--rule); }
+}
+@media (max-width: 560px) {
+  .tline li { grid-template-columns: minmax(0, 1fr); }
+  .frame { border-width: 8px; padding: 8px; }
+  .section { padding-top: 56px; }
+}
+</style>
+
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="paint" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.014 0.085" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="18" xChannelSelector="R" yChannelSelector="G"/></filter>
+<filter id="paintSm" x="-2%" y="-20%" width="104%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.01 0.12" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+
+<div class="wrap">
+  <header class="top">
+    <div class="mark">Davedzzon A. Duque</div>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#quote">Get a quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Licensed civil engineer · Structural · Remote</p>
+        <h1>Structural design and analysis</h1>
+        <p class="lede">I'm Davedzzon Duque, based in Leyte, Philippines. I analyze, design and draw buildings, roofs and foundations for clients across the country, with design winds up to 310 km/h.</p>
+        <div class="actions">
+          <a class="btn primary" href="#quote">Request a quote</a>
+          <a class="btn ghost" href="#projects">See projects</a>
+        </div>
+      </div>
+      <figure class="art">
+        <div class="frame"><svg viewBox="0 0 600 284" role="img" aria-label="Elevation drawing of a three-storey concrete frame with grid lines A to D">
+<rect width="600" height="284" fill="#FFFFFF"/>
+<path d="M120 48V240M240 48V240M360 48V240M480 48V240" stroke="#3E2418" stroke-width="1" stroke-dasharray="10 3 2 3" fill="none" opacity="0.7"/>
+<rect x="120" y="178" width="360" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="120" y="138" width="360" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="120" y="98" width="360" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="117" y="94" width="6" height="128" fill="#3E2418"/><rect x="237" y="94" width="6" height="128" fill="#3E2418"/><rect x="357" y="94" width="6" height="128" fill="#3E2418"/><rect x="477" y="94" width="6" height="128" fill="#3E2418"/><rect x="104" y="222" width="32" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="224" y="222" width="32" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="344" y="222" width="32" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><rect x="464" y="222" width="32" height="8" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/>
+<path d="M88 222H104M136 222H224M256 222H344M376 222H464M496 222H512" stroke="#3E2418" stroke-width="2.5" fill="none"/>
+<circle cx="120" cy="34" r="13" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><text class="t" x="120" y="34" text-anchor="middle" dominant-baseline="central">A</text><circle cx="240" cy="34" r="13" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><text class="t" x="240" y="34" text-anchor="middle" dominant-baseline="central">B</text><circle cx="360" cy="34" r="13" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><text class="t" x="360" y="34" text-anchor="middle" dominant-baseline="central">C</text><circle cx="480" cy="34" r="13" fill="#F6EFE5" stroke="#3E2418" stroke-width="1.5"/><text class="t" x="480" y="34" text-anchor="middle" dominant-baseline="central">D</text>
+<text class="t" x="492" y="102">ROOF</text><text class="t" x="492" y="142">L3</text><text class="t" x="492" y="182">L2</text><text class="t" x="518" y="216">GL</text>
+<path d="M120 236V270" stroke="#3E2418" stroke-width="1"/><path d="M240 236V270" stroke="#3E2418" stroke-width="1"/><path d="M360 236V270" stroke="#3E2418" stroke-width="1"/><path d="M480 236V270" stroke="#3E2418" stroke-width="1"/><path d="M120 254H480" stroke="#3E2418" stroke-width="1.5" fill="none"/><path d="M116 258L124 250" stroke="#3E2418" stroke-width="1.5"/><path d="M236 258L244 250" stroke="#3E2418" stroke-width="1.5"/><path d="M356 258L364 250" stroke="#3E2418" stroke-width="1.5"/><path d="M476 258L484 250" stroke="#3E2418" stroke-width="1.5"/>
+<text class="t" x="180" y="246" text-anchor="middle">TYP. BAY</text><text class="t" x="300" y="246" text-anchor="middle">TYP. BAY</text><text class="t" x="420" y="246" text-anchor="middle">TYP. BAY</text>
+</svg></div>
+        <figcaption>Typical three-storey concrete frame, elevation</figcaption>
+      </figure>
+    </section>
+
+    <ul class="stats">
+      <li><b>10</b><span>Selected projects</span></li>
+      <li><b>310 km/h</b><span>Max design wind</span></li>
+      <li><b>₱150M</b><span>Largest project budget</span></li>
+      <li><b>8</b><span>Software tools</span></li>
+    </ul>
+
+    <section class="section" id="services">
+      <div class="sec-head">
+        <h2>Services</h2>
+        <p>Order one part, or the whole package.</p>
+      </div>
+      <div class="svc">
+        <article class="piece">
+          <h3>Analysis &amp; design</h3>
+          <p>A structural model of your building, with loads analyzed and members designed. Reinforced concrete members are detailed in RCDC.</p>
+        </article>
+        <article class="piece">
+          <h3>Structural plans</h3>
+          <p>Structural drawings for construction: framing and foundation plans, schedules and details, drafted in Revit or AutoCAD.</p>
+        </article>
+        <article class="piece">
+          <h3>Analysis report</h3>
+          <p>A written report of the structural analysis, covering the assumptions, loads and results behind the design.</p>
+        </article>
+        <article class="piece pkg">
+          <h3>Complete package</h3>
+          <span class="badge">All three</span>
+          <p>Analysis and design, plans and report together, so the model, the drawings and the report agree with each other.</p>
+        </article>
+      </div>
+      <p class="note">Rush delivery and site visits can be arranged. Quotes are given per project.</p>
+    </section>
+
+    <section class="section" id="software">
+      <div class="sec-head">
+        <h2>Software</h2>
+        <p>The tools behind the analysis, design and drawings.</p>
+      </div>
+      <div class="tools">
+        <div class="tool-group"><h3>Analysis</h3><ul><li>STAAD.Pro</li><li>ETABS</li></ul></div>
+        <div class="tool-group"><h3>Design</h3><ul><li>RCDC</li><li>SAFE</li></ul></div>
+        <div class="tool-group"><h3>Drafting</h3><ul><li>Revit</li><li>AutoCAD</li></ul></div>
+        <div class="tool-group"><h3>Documents</h3><ul><li>Excel</li><li>Word</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="sec-head">
+        <h2>Projects</h2>
+        <p>Selected structural work, from classrooms to a control tower foundation.</p>
+      </div>
+      <article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p01-classroom.jpg" alt="ETABS model of the 4-storey classroom building" width="1600" height="977"></div></div>
+<div class="text"><p class="num">01</p><h3>4-Storey Classroom Building</h3><p class="where">DPWH Regional Office VIII · Educational</p><p class="desc">A 4-storey classroom building with a roof deck, budgeted at ₱80M. I handled the structural modeling and verification in ETABS, cross-referenced with STAAD.Pro to catch design anomalies. Soft-storey, mass and torsional irregularities and P-delta effects were all checked.</p><ul class="facts"><li>P-Δ stability index 0.028 (limit 0.10)</li><li>Mass ratio max 1.06 (limit 1.5)</li></ul><ul class="tags"><li>ETABS</li><li>STAAD.Pro</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p02a-truss.jpg" alt="STAAD.Pro model of the hip truss roof system" width="1600" height="829" loading="lazy"></div><div class="thumbs"><button class="thumb" type="button" aria-pressed="true" aria-label="STAAD.Pro model of the hip truss roof system" data-src="p02a-truss.jpg" data-alt="STAAD.Pro model of the hip truss roof system" data-w="1600" data-h="829"><img src="p02a-truss.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="Mat foundation model with column reactions" data-src="p02b-mat.jpg" data-alt="Mat foundation model with column reactions" data-w="1600" data-h="971"><img src="p02b-mat.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="ETABS model of the front canopy" data-src="p02c-canopy.jpg" data-alt="ETABS model of the front canopy" data-w="1600" data-h="1023"><img src="p02c-canopy.jpg" alt="" loading="lazy"></button></div></div>
+<div class="text"><p class="num">02</p><h3>School Auditorium</h3><p class="where">Tacloban · DPWH Regional Office VIII · Educational</p><p class="desc">One project budgeted at about ₱150M, in three parts. The hip truss of the third-floor sports court spans roughly 30 m × 45 m inside a 33 m × 71 m footprint, analyzed in STAAD.Pro. The mat foundation was designed in SAFE from the superstructure reactions. The 8.94 m front canopy rests on two columns and was modeled in ETABS.</p><ul class="facts"><li>Design wind 290 km/h</li><li>Canopy on an isolated footing with strap beam</li></ul><ul class="tags"><li>STAAD.Pro</li><li>ETABS</li><li>SAFE</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p03a-model.jpg" alt="Analysis model of the reinforced concrete mausoleum" width="1500" height="1148" loading="lazy"></div><div class="thumbs"><button class="thumb" type="button" aria-pressed="true" aria-label="Analysis model of the reinforced concrete mausoleum" data-src="p03a-model.jpg" data-alt="Analysis model of the reinforced concrete mausoleum" data-w="1500" data-h="1148"><img src="p03a-model.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="Structural sheet with column rebar details and footing" data-src="p03b-column.jpg" data-alt="Structural sheet with column rebar details and footing" data-w="1900" data-h="1202"><img src="p03b-column.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="Structural sheet with beam schedule and reinforcement isometrics" data-src="p03c-beam.jpg" data-alt="Structural sheet with beam schedule and reinforcement isometrics" data-w="1900" data-h="1203"><img src="p03c-beam.jpg" alt="" loading="lazy"></button></div></div>
+<div class="text"><p class="num">03</p><h3>Mausoleum</h3><p class="where">General Trias, Cavite · Memorial</p><p class="desc">A reinforced concrete mausoleum about 4 m high with a roof slab and a front canopy. Designed to NSCP 2015 and ACI 318 for a 250 km/h design wind, seismic Zone 4 and an allowable soil bearing capacity of 143 kPa. Detailed with isolated footings, footing tie beams, columns, beams and a two-way roof slab.</p><ul class="facts"><li>Columns and beams 200 × 300 mm</li><li>Isolated footings 900 × 900 × 300 mm</li></ul><ul class="tags"><li>NSCP 2015</li><li>ACI 318</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p04-ev.jpg" alt="STAAD.Pro model of an EV charging station canopy" width="1500" height="1207" loading="lazy"></div></div>
+<div class="text"><p class="num">04</p><h3>EV Charging Stations</h3><p class="where">Region 8 · Infrastructure</p><p class="desc">Analysis and design of electric vehicle charging stations slated for construction at strategic locations across Region 8. Modeled in STAAD.Pro for a 310 km/h design wind, with framing and materials chosen for a standardized, economical design.</p><ul class="facts"><li>Design wind 310 km/h</li></ul><ul class="tags"><li>STAAD.Pro</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p05-court.jpg" alt="STAAD.Pro model of the arched steel covered court" width="1600" height="907" loading="lazy"></div></div>
+<div class="text"><p class="num">05</p><h3>Steel Covered Court</h3><p class="where">Consolacion, Cebu · Community facility</p><p class="desc">Structural analysis and design of a steel covered court of about 17.5 m × 34.5 m. The steel framework was modeled in STAAD.Pro and detailed to local structural code requirements, with material efficiency and safety as the priorities.</p><ul class="tags"><li>STAAD.Pro</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p06-foundation.jpg" alt="Isolated footing layout plan from SAFE" width="1600" height="1045" loading="lazy"></div></div>
+<div class="text"><p class="num">06</p><h3>Hazardous Waste Warehouse and Office</h3><p class="where">Tacloban · Industrial / mixed-use</p><p class="desc">Foundation design for a 2-storey mixed-use building where a hazardous waste warehouse connects to a 2-storey office. Reactions from the superstructure model were imported into SAFE to design isolated footings, with strict settlement and deflection controls for long-term serviceability.</p><ul class="tags"><li>SAFE</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p07a-models.jpg" alt="Frame, load and roof truss models of the mixed-use building" width="1600" height="1107" loading="lazy"></div><div class="thumbs"><button class="thumb" type="button" aria-pressed="true" aria-label="Frame, load and roof truss models of the mixed-use building" data-src="p07a-models.jpg" data-alt="Frame, load and roof truss models of the mixed-use building" data-w="1600" data-h="1107"><img src="p07a-models.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="Ground floor beam plan and tie beam details" data-src="p07b-beamplan.jpg" data-alt="Ground floor beam plan and tie beam details" data-w="1900" data-h="1171"><img src="p07b-beamplan.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-pressed="false" aria-label="Foundation plan with footing and column details" data-src="p07c-foundation.jpg" data-alt="Foundation plan with footing and column details" data-w="1900" data-h="1158"><img src="p07c-foundation.jpg" alt="" loading="lazy"></button></div></div>
+<div class="text"><p class="num">07</p><h3>3-Storey Mixed-Use Building</h3><p class="where">Guiuan · Commercial / residential</p><p class="desc">A 520 m² building with storage on the first and second floors and three rental rooms on the third. STAAD.Pro analysis was cross-referenced with ETABS, RCDC handled member design and detailing, and the structural plans were produced in Revit.</p><ul class="facts"><li>Floor area 520 m²</li></ul><ul class="tags"><li>STAAD.Pro</li><li>ETABS</li><li>RCDC</li><li>Revit</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p08-tower.jpg" alt="STAAD.Pro models of the control tower and its foundation" width="1600" height="790" loading="lazy"></div></div>
+<div class="text"><p class="num">08</p><h3>Air Traffic Control Tower Foundation</h3><p class="where">Catbalogan, Samar · Aviation infrastructure</p><p class="desc">Foundation design for an air traffic control tower with a foundation area of about 14 m × 40 m. Superstructure reactions from the STAAD.Pro analysis were the basis for the manual design of the foundation system.</p><ul class="tags"><li>STAAD.Pro</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p09-villa.jpg" alt="STAAD.Pro models of the villa frame and roof trusses" width="1600" height="795" loading="lazy"></div></div>
+<div class="text"><p class="num">09</p><h3>2-Storey Villa</h3><p class="where">Siargao · Hospitality</p><p class="desc">A premium rental villa for a resort, with a distinctive roof truss system that carries both its architectural identity and its structural performance. Engineered for wind speeds up to 310 km/h and designed with the Equivalent Static seismic method.</p><ul class="facts"><li>Floor area 96 m²</li></ul><ul class="tags"><li>STAAD.Pro</li></ul></div>
+</article>
+<article class="work">
+<div class="gallery"><div class="frame"><img class="main" src="p10-frames.jpg" alt="Four STAAD.Pro frame models of residential and mixed-use buildings" width="1800" height="375" loading="lazy"></div></div>
+<div class="text"><p class="num">10</p><h3>Residential and Mixed-Use Buildings</h3><p class="where">Palo · Tacloban · Frame analysis</p><p class="desc">Four frames analyzed in STAAD.Pro: a 160 m² two-storey residential, a 200 m² two-storey mixed-use with an open-plan ground floor of about 10 × 10 m, a 176 m² two-storey residential in Palo, and a 150 m² three-storey residential in Tacloban. ETABS cross-verified the results and RCDC designed and detailed members and foundations on selected buildings.</p><ul class="tags"><li>STAAD.Pro</li><li>ETABS</li><li>RCDC</li></ul></div>
+</article>
+      <p class="note">Also completed: a 3-storey resort residential building, an administration building foundation, covered parking and a bungalow house.</p>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="sec-head">
+        <h2>Experience</h2>
+        <p>Work history, certifications and education.</p>
+      </div>
+      <ul class="tline">
+        <li>
+          <span class="when">Aug 2026 – Present</span>
+          <div>
+            <div class="role">Planning Officer I, Structural Engineer</div>
+            <div class="org">DPWH Regional Office No. VIII, Baras, Leyte</div>
+          </div>
+        </li>
+        <li>
+          <span class="when">Jul 2025 – Jul 2026</span>
+          <div>
+            <div class="role">Project Evaluation Officer I and Resident Engineer</div>
+            <div class="org">DPWH Leyte 1st District Engineering Office, Pawing, Leyte</div>
+          </div>
+        </li>
+        <li>
+          <span class="when">Feb 2025 – Jun 2025</span>
+          <div>
+            <div class="role">Engineer I and Resident Engineer</div>
+            <div class="org">DPWH Leyte 1st District Engineering Office, Pawing, Leyte</div>
+          </div>
+        </li>
+        <li>
+          <span class="when">Feb 2025 – Present</span>
+          <div>
+            <div class="role">Freelance Structural Engineer (remote)</div>
+            <div class="org">Structural analysis, plans, drawings and estimates for private projects</div>
+          </div>
+        </li>
+        <li>
+          <span class="when">2020 – 2024</span>
+          <div>
+            <div class="role">BS Civil Engineering</div>
+            <div class="org">Eastern Visayas State University, Main Campus, Tacloban City</div>
+          </div>
+        </li>
+      </ul>
+      <div class="two">
+        <div>
+          <h3>Certifications</h3>
+          <ul>
+            <li>Licensed Civil Engineer (2024)</li>
+            <li>STAAD.Pro and RCDC certification (2024)</li>
+            <li>Revit Structural certification (2025)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul>
+            <li>Filipino</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <svg class="band" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#paintSm)"><rect x="-30" y="0" width="1260" height="14" fill="#EFE6DA"/><rect x="-30" y="10" width="1260" height="14" fill="#CDB8A0"/><rect x="-30" y="20" width="1260" height="12" fill="#E9DCCB"/><rect x="-30" y="30" width="1260" height="10" fill="#F6EFE5"/><rect x="-30" y="38" width="1260" height="20" fill="#5B3523"/><rect x="473" y="2" width="289" height="9" rx="4" fill="#E3D4C2" opacity="0.82"/><rect x="1035" y="2" width="107" height="9" rx="4" fill="#E3D4C2" opacity="0.81"/><rect x="460" y="2" width="266" height="9" rx="4" fill="#F6EFE5" opacity="0.86"/><rect x="181" y="2" width="195" height="9" rx="4" fill="#E3D4C2" opacity="0.85"/><rect x="729" y="2" width="239" height="9" rx="4" fill="#F6EFE5" opacity="0.73"/><rect x="-24" y="2" width="287" height="9" rx="4" fill="#F6EFE5" opacity="0.66"/><rect x="322" y="2" width="296" height="9" rx="4" fill="#E3D4C2" opacity="0.56"/><rect x="97" y="2" width="135" height="9" rx="4" fill="#E3D4C2" opacity="0.55"/><rect x="-47" y="2" width="101" height="9" rx="4" fill="#F6EFE5" opacity="0.81"/><rect x="289" y="12" width="142" height="9" rx="4" fill="#B89B7C" opacity="0.63"/><rect x="357" y="12" width="238" height="9" rx="4" fill="#CDB8A0" opacity="0.57"/><rect x="353" y="12" width="198" height="9" rx="4" fill="#B89B7C" opacity="0.51"/><rect x="799" y="12" width="142" height="9" rx="4" fill="#CDB8A0" opacity="0.61"/><rect x="629" y="12" width="177" height="9" rx="4" fill="#CDB8A0" opacity="0.74"/><rect x="642" y="12" width="116" height="9" rx="4" fill="#B89B7C" opacity="0.64"/><rect x="576" y="12" width="223" height="9" rx="4" fill="#B89B7C" opacity="0.57"/><rect x="917" y="12" width="280" height="9" rx="4" fill="#CDB8A0" opacity="0.52"/><rect x="-4" y="12" width="291" height="9" rx="4" fill="#B89B7C" opacity="0.84"/><rect x="-13" y="22" width="240" height="9" rx="4" fill="#D9C7B2" opacity="0.65"/><rect x="-32" y="22" width="215" height="9" rx="4" fill="#E9DCCB" opacity="0.78"/><rect x="352" y="22" width="130" height="9" rx="4" fill="#E9DCCB" opacity="0.87"/><rect x="896" y="22" width="188" height="9" rx="4" fill="#D9C7B2" opacity="0.86"/><rect x="463" y="22" width="298" height="9" rx="4" fill="#D9C7B2" opacity="0.54"/><rect x="702" y="22" width="320" height="9" rx="4" fill="#D9C7B2" opacity="0.51"/><rect x="136" y="22" width="153" height="9" rx="4" fill="#D9C7B2" opacity="0.71"/><rect x="692" y="22" width="137" height="9" rx="4" fill="#D9C7B2" opacity="0.61"/><rect x="1066" y="22" width="123" height="9" rx="4" fill="#D9C7B2" opacity="0.77"/><rect x="577" y="31" width="145" height="9" rx="4" fill="#FBF8F3" opacity="0.75"/><rect x="583" y="31" width="223" height="9" rx="4" fill="#FBF8F3" opacity="0.79"/><rect x="115" y="31" width="253" height="9" rx="4" fill="#EFE6DA" opacity="0.51"/><rect x="654" y="31" width="311" height="9" rx="4" fill="#EFE6DA" opacity="0.68"/><rect x="813" y="31" width="137" height="9" rx="4" fill="#FBF8F3" opacity="0.89"/><rect x="17" y="31" width="305" height="9" rx="4" fill="#EFE6DA" opacity="0.63"/><rect x="374" y="31" width="133" height="9" rx="4" fill="#FBF8F3" opacity="0.75"/><rect x="797" y="31" width="127" height="9" rx="4" fill="#FBF8F3" opacity="0.67"/><rect x="255" y="31" width="115" height="9" rx="4" fill="#EFE6DA" opacity="0.62"/><rect x="878" y="42" width="258" height="9" rx="4" fill="#3E2418" opacity="0.89"/><rect x="878" y="42" width="224" height="9" rx="4" fill="#8A5530" opacity="0.79"/><rect x="931" y="42" width="170" height="9" rx="4" fill="#6A3B22" opacity="0.69"/><rect x="250" y="42" width="128" height="9" rx="4" fill="#6A3B22" opacity="0.83"/><rect x="1039" y="42" width="145" height="9" rx="4" fill="#8A5530" opacity="0.87"/><rect x="643" y="42" width="146" height="9" rx="4" fill="#3E2418" opacity="0.70"/><rect x="1005" y="42" width="300" height="9" rx="4" fill="#8A5530" opacity="0.85"/><rect x="689" y="42" width="116" height="9" rx="4" fill="#6A3B22" opacity="0.78"/><rect x="20" y="42" width="294" height="9" rx="4" fill="#6A3B22" opacity="0.65"/></g></svg>
+
+    <section class="rug" id="quote">
+      <div>
+        <h2>Get a quote</h2>
+        <p class="lead">Quotes are given per project, after I review your plans.</p>
+        <dl class="contact">
+          <div><dt>Phone</dt><dd><a href="tel:+639197906652">0919 790 6652</a></dd><button class="copy" type="button" data-copy="09197906652">Copy</button></div>
+          <div><dt>Email</dt><dd><a href="mailto:dduque212@gmail.com">dduque212@gmail.com</a></dd><button class="copy" type="button" data-copy="dduque212@gmail.com">Copy</button></div>
+          <div><dt>Messenger</dt><dd>Davedzzon Duque</dd><button class="copy" type="button" data-copy="Davedzzon Duque">Copy</button></div>
+        </dl>
+      </div>
+      <div class="col">
+        <div>
+          <h3>What to send</h3>
+          <ul>
+            <li>Architectural plans or a sketch of the building</li>
+            <li>Location of the site, and soil data if you have it</li>
+            <li>Number of storeys and total floor area</li>
+            <li>Which service you need, and your target date</li>
+          </ul>
+        </div>
+        <div>
+          <h3>How it works</h3>
+          <ol>
+            <li>You send the project details.</li>
+            <li>I review them and send you a quote.</li>
+            <li>Work starts after a 50% down payment.</li>
+            <li>You receive the deliverables, with two rounds of revisions included.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="floor">
+    <span>Davedzzon A. Duque · Licensed Civil Engineer</span>
+    <span>Leyte, Philippines</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.work').forEach(function (w) {
+  var main = w.querySelector('img.main');
+  if (!main) return;
+  w.querySelectorAll('.thumb').forEach(function (b) {
+    b.addEventListener('click', function () {
+      main.src = b.dataset.src;
+      main.alt = b.dataset.alt;
+      main.width = b.dataset.w;
+      main.height = b.dataset.h;
+      w.querySelectorAll('.thumb').forEach(function (o) {
+        o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
+      });
+    });
+  });
+});
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = b.dataset.copy;
+    function done() {
+      b.textContent = 'Copied';
+      setTimeout(function () { b.textContent = 'Copy'; }, 1800);
+    }
+    function fallback() {
+      var dd = b.previousElementSibling;
+      try {
+        var range = document.createRange();
+        range.selectNodeContents(dd);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      } catch (err) {}
+    }
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (err) {
+      fallback();
+    }
+  });
+});
+</script>
+
+</body></html>
